@@ -1,5 +1,9 @@
 class Api::V1::UsersController < ApplicationController
 
+	def index
+		binding.pry
+	end
+
 	def create
 		@user = User.new(user_params)
 		if @user.save
@@ -8,6 +12,12 @@ class Api::V1::UsersController < ApplicationController
 
 		end
 		
+	end
+
+	def show
+		data = Auth.decrypt (request.env['HTTP_AUTHORIZATION'])
+		
+
 	end
 
 

@@ -19,10 +19,11 @@ Rails.application.routes.draw do
       resources :events
     end
   end
-  resources :users
+  
 
   namespace :api do	
   	namespace :v1 do	
+  		resources :users
   		post 'signup', to: 'users#create'
   	end
   end
