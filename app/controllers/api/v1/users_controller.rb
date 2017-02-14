@@ -1,7 +1,8 @@
 class Api::V1::UsersController < ApplicationController
 
 	def index
-		binding.pry
+		@users= User.all
+		render json: @users
 	end
 
 	def create
@@ -15,7 +16,10 @@ class Api::V1::UsersController < ApplicationController
 	end
 
 	def show
+		# @note = Note.find(params[:id])
 		data = Auth.decrypt (request.env['HTTP_AUTHORIZATION'])
+		@note = Note.find(data)
+		render json: @note
 		
 
 	end

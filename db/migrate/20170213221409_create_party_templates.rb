@@ -1,6 +1,6 @@
-class CreateApiV1PartyTemplates < ActiveRecord::Migration[5.0]
+class CreatePartyTemplates < ActiveRecord::Migration[5.0]
   def change
-    create_table :api_v1_party_templates do |t|
+    create_table :party_templates do |t|
       t.string :title
       t.text :description
       t.string :theme_category

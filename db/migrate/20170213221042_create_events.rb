@@ -1,9 +1,9 @@
-class CreateApiV1Events < ActiveRecord::Migration[5.0]
+class CreateEvents < ActiveRecord::Migration[5.0]
   def change
-    create_table :api_v1_events do |t|
+    create_table :events do |t|
       t.string :title
       t.text :description
-      t.datetime :date
+      t.datetime :event_date
       t.belongs_to :party_template, foreign_key: true
       t.belongs_to :user, foreign_key: true
       t.integer :num_attendees
@@ -12,3 +12,5 @@ class CreateApiV1Events < ActiveRecord::Migration[5.0]
     end
   end
 end
+
+
