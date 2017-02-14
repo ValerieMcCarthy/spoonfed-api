@@ -12,20 +12,20 @@
 
 ActiveRecord::Schema.define(version: 20170213221952) do
 
-  create_table "api_v1_events", force: :cascade do |t|
+  create_table "events", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "date"
+    t.datetime "event_date"
     t.integer  "party_template_id"
     t.integer  "user_id"
     t.integer  "num_attendees"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.index ["party_template_id"], name: "index_api_v1_events_on_party_template_id"
-    t.index ["user_id"], name: "index_api_v1_events_on_user_id"
+    t.index ["party_template_id"], name: "index_events_on_party_template_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
-  create_table "api_v1_items", force: :cascade do |t|
+  create_table "items", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.string   "item_category"
@@ -34,16 +34,16 @@ ActiveRecord::Schema.define(version: 20170213221952) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "api_v1_party_items", force: :cascade do |t|
+  create_table "party_items", force: :cascade do |t|
     t.integer  "item_id"
     t.integer  "party_template_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.index ["item_id"], name: "index_api_v1_party_items_on_item_id"
-    t.index ["party_template_id"], name: "index_api_v1_party_items_on_party_template_id"
+    t.index ["item_id"], name: "index_party_items_on_item_id"
+    t.index ["party_template_id"], name: "index_party_items_on_party_template_id"
   end
 
-  create_table "api_v1_party_templates", force: :cascade do |t|
+  create_table "party_templates", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.string   "theme_category"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20170213221952) do
     t.integer  "user_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.index ["user_id"], name: "index_api_v1_party_templates_on_user_id"
+    t.index ["user_id"], name: "index_party_templates_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
