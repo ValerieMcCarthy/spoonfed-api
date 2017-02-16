@@ -9,18 +9,17 @@ class Api::V1::UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			jwt = Auth.encrypt({user_id: @user.id})
-			render json: {jwt: jwt, name: @user.name}
+			render json: {jwt: jwt, name: @user.name, id: @user.id}
 
 		end
-		
+
 	end
 
 	def show
-		# @note = Note.find(params[:id])
-		data = Auth.decrypt (request.env['HTTP_AUTHORIZATION'])
-		@note = Note.find(data)
-		render json: @note
-		
+		@user = User.find(params[:id])
+		# data = Auth.decrypt (request.env['HTTP_AUTHORIZATION'])
+		render json: @user
+
 
 	end
 
