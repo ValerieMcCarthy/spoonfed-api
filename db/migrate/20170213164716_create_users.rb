@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.datetime :date_of_birth
       t.string :gender
       t.text :bio
-      t.string :profile_picture
+      t.string :user_profile_picture
 
       t.timestamps
     end

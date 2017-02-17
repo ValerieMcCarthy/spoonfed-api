@@ -1,8 +1,8 @@
-user1 = User.create(name: 'Valerie McCarthy', email: 'valeriewilsonmccarthy@gmail.com', password: "1234", zipcode: 10007, date_of_birth: 02/21/1968, gender: 'female', bio: 'Wife, sister, daughter, friend, Flatiron student', profile_picture: "Barry and Me at the Beach")
+user1 = User.create(name: 'Valerie McCarthy', email: 'valeriewilsonmccarthy@gmail.com', password: "1234", zipcode: 10007, date_of_birth: 02/21/1968, gender: 'female', bio: 'Wife, sister, daughter, friend, Flatiron student', user_profile_picture: "Barry and Me at the Beach")
 
-user2 = User.create(name: 'Ashley Robinson', email: 'ashley.robinson@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 12/22/1989, gender: 'female', bio: 'Chronic face-rubber. Enthusiastic coffee drinker. Might need to work on bio-writing skills', profile_picture: "Ash Profile Pic")
+user2 = User.create(name: 'Ashley Robinson', email: 'ashley.robinson@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 12/22/1989, gender: 'female', bio: 'Chronic face-rubber. Enthusiastic coffee drinker. Might need to work on bio-writing skills', user_profile_picture: "Ash Profile Pic")
 
-user3 = User.create(name: 'Frankie Ferreira', email: 'frankie.ferreira@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 9/12/1997, gender: 'male', bio: 'Hipster coder', profile_picture: "Frankie and The Crew")
+user3 = User.create(name: 'Frankie Ferreira', email: 'frankie.ferreira@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 9/12/1997, gender: 'male', bio: 'Hipster coder', user_profile_picture: "Frankie and The Crew")
 
 	# t.string   "title"
  #    t.text     "description"
@@ -45,10 +45,10 @@ party_item6 = PartyItem.create(item_id: 6, party_template_id: 3 )
 
 party_item7 = PartyItem.create(item_id: 2, party_template_id: 3 )
 
-event1 = Event.create(title: 'Scrabble Night at the McCarthy House', description: 'Casual night of home cooked food and intellectual puzzles', event_date: 3/10/2017, party_template_id: 1, user_id: 1, num_attendees: 8)
+# event1 = Event.create(title: 'Scrabble Night at the McCarthy House', description: 'Casual night of home cooked food and intellectual puzzles', event_date: 3/10/2017, party_template_id: 1, user_id: 1, num_attendees: 8)
 
-event2 = Event.create(title: 'Oscar Night Splash', description: 'Black tie anId red carpet dresses with highball cocktails and 75 inch screen TV', event_date: 2/26/2017, party_template_id: 2, user_id: 3, num_attendees: 18)
+# event2 = Event.create(title: 'Oscar Night Splash', description: 'Black tie anId red carpet dresses with highball cocktails and 75 inch screen TV', event_date: 2/26/2017, party_template_id: 2, user_id: 3, num_attendees: 18)
 
-event3 = Event.create(title: 'Chill Night Celebrating Flatiron Graduation Hosted by Ash', description: 'BYO good cheer', event_date: 2/24/2017, party_template_id: 3, user_id: 2, num_attendees: 35)
+# event3 = Event.create(title: 'Chill Night Celebrating Flatiron Graduation Hosted by Ash', description: 'BYO good cheer', event_date: 2/24/2017, party_template_id: 3, user_id: 2, num_attendees: 35)
 
 

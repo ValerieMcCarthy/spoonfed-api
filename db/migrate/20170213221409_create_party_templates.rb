@@ -6,6 +6,7 @@ class CreatePartyTemplates < ActiveRecord::Migration[5.0]
       t.string :theme_category
       t.integer :min_age
       t.integer :max_age
+      t.string :party_picture
       t.belongs_to :user, foreign_key: true
 
       t.timestamps
