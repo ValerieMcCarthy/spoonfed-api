@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170215180846) do
+ActiveRecord::Schema.define(version: 20170213221952) do
 
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "event_date"
+    t.date     "date"
+    t.time     "start_time"
+    t.time     "end_time"
     t.integer  "party_template_id"
     t.integer  "user_id"
     t.integer  "num_attendees"
@@ -49,10 +51,10 @@ ActiveRecord::Schema.define(version: 20170215180846) do
     t.string   "theme_category"
     t.integer  "min_age"
     t.integer  "max_age"
+    t.string   "party_picture"
     t.integer  "user_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.string   "profile_pic"
     t.index ["user_id"], name: "index_party_templates_on_user_id"
   end
 
@@ -64,9 +66,9 @@ ActiveRecord::Schema.define(version: 20170215180846) do
     t.datetime "date_of_birth"
     t.string   "gender"
     t.text     "bio"
-    t.string   "profile_picture"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "user_profile_picture"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
 end
