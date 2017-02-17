@@ -1,8 +1,8 @@
-user1 = User.create(name: 'Valerie McCarthy', email: 'valeriewilsonmccarthy@gmail.com', password: "1234", zipcode: 10007, date_of_birth: 02/21/1968, gender: 'female', bio: 'Wife, sister, daughter, friend, Flatiron student', user_profile_picture: "Barry and Me at the Beach")
+user1 = User.create(name: 'Valerie McCarthy', email: 'valeriewilsonmccarthy@gmail.com', password: "1234", zipcode: 10007, date_of_birth: 02/21/1968, gender: 'female', bio: 'Wife, sister, daughter, friend, Flatiron student', user_profile_picture: "https://res.cloudinary.com/projects/image/upload/v1487344688/vjfbhtkeqr8bp7b6u6tu.jpg")
 
-user2 = User.create(name: 'Ashley Robinson', email: 'ashley.robinson@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 12/22/1989, gender: 'female', bio: 'Chronic face-rubber. Enthusiastic coffee drinker. Might need to work on bio-writing skills', user_profile_picture: "Ash Profile Pic")
+user2 = User.create(name: 'Ashley Robinson', email: 'ashley.robinson@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 12/22/1989, gender: 'female', bio: 'Chronic face-rubber. Enthusiastic coffee drinker. Might need to work on bio-writing skills', user_profile_picture: "https://res.cloudinary.com/projects/image/upload/v1487362201/Ashley_mvhwgy.jpg")
 
-user3 = User.create(name: 'Frankie Ferreira', email: 'frankie.ferreira@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 9/12/1997, gender: 'male', bio: 'Hipster coder', user_profile_picture: "Frankie and The Crew")
+user3 = User.create(name: 'Frankie Ferreira', email: 'frankie.ferreira@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 9/12/1997, gender: 'male', bio: 'Hipster coder', user_profile_picture: "https://res.cloudinary.com/projects/image/upload/v1487362289/frankie_x9kmv9.jpg")
 
 	# t.string   "title"
  #    t.text     "description"
