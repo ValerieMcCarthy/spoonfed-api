@@ -32,6 +32,6 @@ class Api::V1::PartyTemplatesController < ApplicationController
 	private
 
 	def template_params
-	 params.permit(:title, :description, :theme_category, :min_age, :max_age)
+		params.permit(:title, :description, :theme_category, :min_age, :max_age, :party_picture)
 	end
 end
