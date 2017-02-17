@@ -24,11 +24,17 @@ item5 = Item.create(name: 'Longboard Beer', description: 'Smooth refreshing lage
 
 item6 = Item.create(name: 'Whole Food Chips and Guacamole', description: 'The ultimate snack', item_category: 'food', default_price: 7)
 
-party_template1 = PartyTemplate.create(title: 'Casual Evening Over a Board Game', description: 'When you need something more at dinner than just conversation or when you are yearning for a throw back to the days of Monopoly', theme_category: 'dinner', min_age: 12, max_age: 110, user_id: 2)
+party_template1 = PartyTemplate.create(title: 'Frankie Birthday Party', description: 'Champagne and good music from Spotify', theme_category: 'Birthday party', min_age: 21, max_age: 110, party_picture: 'https://res.cloudinary.com/projects/image/upload/v1487354289/porvt2ov4ftpkzlggj4t.jpg', user_id: 2)
 
-party_template2 = PartyTemplate.create(title: 'Gathering for an Evening TV Awards Event', description: 'Something to help you not notice the onslaught of commercials', theme_category: 'dinner', min_age: 21, max_age: 110, user_id: 3)
+party_template2 = PartyTemplate.create(title: 'Going Away Party', description: 'Saying goodbye in style and good company', theme_category: 'Cocktail Party', min_age: 21, max_age: 110, party_picture: 'https://res.cloudinary.com/projects/image/upload/v1487343851/fw5wzo0gi5khex8fawnr.jpg', user_id: 3)
 
-party_template3 = PartyTemplate.create(title: 'Casual extended friends get together', description: 'When the group needs to kick back and either celebrate or forget', theme_category: 'cocktail party', min_age: 21, max_age: 110, user_id: 1)
+party_template3 = PartyTemplate.create(title: 'Casual extended friends get together', description: 'When the group needs to kick back and chill', theme_category: 'Cocktail party', min_age: 21, max_age: 110, party_picture: 'https://res.cloudinary.com/projects/image/upload/v1487269053/sample.jpg', user_id: 1)
+
+party_template4 = PartyTemplate.create(title: 'Casual Evening Over a Board Game', description: 'When you are yearning for a throw back to the days of Monopoly', theme_category: 'Dinner', min_age: 12, max_age: 110, party_picture: 'https://res.cloudinary.com/projects/image/upload/v1487360347/yorzlgu9vetud72itk4q.jpg', user_id: 2)
+
+party_template5 = PartyTemplate.create(title: 'Valerie Grad Party', description: 'Dark and stormies and great music', theme_category: 'Celebration', min_age: 14, max_age: 85, party_picture: 'https://res.cloudinary.com/projects/image/upload/v1487354223/e6rgu3iiqapim4gws655.jpg', user_id: 1)
+
+party_template6 = PartyTemplate.create(title: 'Protest Trump Fundraiser', description: 'Community gathering to help us activate', theme_category: 'Organizer', min_age: 21, max_age: 110, party_picture: 'https://res.cloudinary.com/projects/image/upload/v1487354418/aqrsv1dasrq9rboxqfdt.jpg', user_id: 3)
 
 party_item1 = PartyItem.create(item_id: 1, party_template_id: 1 )
 
