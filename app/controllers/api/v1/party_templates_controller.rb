@@ -11,7 +11,7 @@ class Api::V1::PartyTemplatesController < ApplicationController
 	end
 
 	def create
-		binding.pry
+		
 		id = Auth.decode(response.request.env["HTTP_AUTHORIZATION"])[0]['user_id']
 		@party_template = PartyTemplate.new(template_params)
 		@party_template.user_id = id
