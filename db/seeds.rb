@@ -1,8 +1,8 @@
-user1 = User.create(name: 'Valerie McCarthy', email: 'valeriewilsonmccarthy@gmail.com', password: "1234", zipcode: 10007, date_of_birth: 1968-02-21, gender: 'female', bio: 'Wife, sister, daughter, friend, Flatiron student', user_profile_picture: "https://res.cloudinary.com/projects/image/upload/v1487344688/vjfbhtkeqr8bp7b6u6tu.jpg")
+user1 = User.create(name: 'Valerie McCarthy', email: 'valeriewilsonmccarthy@gmail.com', password: "1234", zipcode: 10007, date_of_birth: 'Wed Feb 21 1968 00:00:00 GMT-0400 (EDT)', gender: 'female', bio: 'Wife, sister, daughter, friend, Flatiron student', user_profile_picture: "https://res.cloudinary.com/projects/image/upload/v1487344688/vjfbhtkeqr8bp7b6u6tu.jpg")
 
-user2 = User.create(name: 'Ashley Robinson', email: 'ashley.robinson@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 1989-12-22, gender: 'female', bio: 'Chronic face-rubber. Enthusiastic coffee drinker. Might need to work on bio-writing skills', user_profile_picture: "https://res.cloudinary.com/projects/image/upload/v1487362201/Ashley_mvhwgy.jpg")
+user2 = User.create(name: 'Ashley Robinson', email: 'ashley.robinson@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 'Fri Dec 22 1989 00:00:00 GMT-0400 (EDT)', gender: 'female', bio: 'Chronic face-rubber. Enthusiastic coffee drinker. Might need to work on bio-writing skills', user_profile_picture: "https://res.cloudinary.com/projects/image/upload/v1487362201/Ashley_mvhwgy.jpg")
 
-user3 = User.create(name: 'Frankie Ferreira', email: 'frankie.ferreira@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 1995-9-12, gender: 'male', bio: 'Hipster coder', user_profile_picture: "https://res.cloudinary.com/projects/image/upload/v1487362289/frankie_x9kmv9.jpg")
+user3 = User.create(name: 'Frankie Ferreira', email: 'frankie.ferreira@flatironschool.com', password: "1234", zipcode: 10030, date_of_birth: 'Tue Sep 12 1995 00:00:00 GMT-0400 (EDT)', gender: 'male', bio: 'Hipster coder', user_profile_picture: "https://res.cloudinary.com/projects/image/upload/v1487362289/frankie_x9kmv9.jpg")
 
 	# t.string   "title"
  #    t.text     "description"
@@ -56,5 +56,3 @@ party_item7 = PartyItem.create(item_id: 2, party_template_id: 3 )
 # event2 = Event.create(title: 'Oscar Night Splash', description: 'Black tie anId red carpet dresses with highball cocktails and 75 inch screen TV', event_date: 2/26/2017, party_template_id: 2, user_id: 3, num_attendees: 18)
 
 # event3 = Event.create(title: 'Chill Night Celebrating Flatiron Graduation Hosted by Ash', description: 'BYO good cheer', event_date: 2/24/2017, party_template_id: 3, user_id: 2, num_attendees: 35)
-
-
