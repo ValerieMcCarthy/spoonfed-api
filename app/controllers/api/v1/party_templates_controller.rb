@@ -19,6 +19,7 @@ class Api::V1::PartyTemplatesController < ApplicationController
 	end
 
 	def create
+		
 		id = Auth.decode(response.request.env["HTTP_AUTHORIZATION"])[0]['user_id']
 		@party_template = PartyTemplate.new(template_params)
 		if id
@@ -37,6 +38,6 @@ class Api::V1::PartyTemplatesController < ApplicationController
 	private
 
 	def template_params
-		params.permit(:title, :description, :theme_category, :min_age, :max_age, :party_picture)
+		params.permit(:title, :description, :theme_category, :min_age, :max_age, :party_picture, items_attributes:[ :name, :description, :item_category, :default_price])
 	end
 end
