@@ -14,10 +14,24 @@ class Api::V1::EventsController < ApplicationController
 		end
 	end
 
-		def show
+	def show
 			@event = Event.find(params[:id])
 			render json: @event
+	end
+
+
+	def update
+		id = params["event"]["id"]
+		@event = Event.find(id)
+		if @event.update(event_params)
+			render json: @event
 		end
+	end
+
+	def destroy
+		@event = Event.find(params[:id])
+		@event.destroy
+	end
 
 	end
 

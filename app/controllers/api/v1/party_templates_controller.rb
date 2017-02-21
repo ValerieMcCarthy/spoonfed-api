@@ -15,8 +15,8 @@ class Api::V1::PartyTemplatesController < ApplicationController
 		@party_template = PartyTemplate.find(id)
 		if @party_template.update(template_params)
 			render json: @party_template
-		end 
-	end 
+		end
+	end
 
 	def create
 		id = Auth.decode(response.request.env["HTTP_AUTHORIZATION"])[0]['user_id']
@@ -27,6 +27,11 @@ class Api::V1::PartyTemplatesController < ApplicationController
 		if @party_template.save
 			render json: @party_template
 		end
+	end
+
+	def destroy
+		@party_template = PartyTemplate.find(params[:id])
+		@party_template.destroy
 	end
 
 	private
