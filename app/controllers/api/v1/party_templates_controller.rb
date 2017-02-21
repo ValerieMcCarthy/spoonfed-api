@@ -19,11 +19,16 @@ class Api::V1::PartyTemplatesController < ApplicationController
 	end
 
 	def create
-		
 		id = Auth.decode(response.request.env["HTTP_AUTHORIZATION"])[0]['user_id']
 		@party_template = PartyTemplate.new(template_params)
 		if id
 			@party_template.user_id = id
+		end
+		if params["parentID"]
+	  	@parent_template = PartyTemplate.find(params["parentID"])
+		end
+		if @parent_template
+			@party_template.items << @parent_template.items
 		end
 		if @party_template.save
 			render json: @party_template

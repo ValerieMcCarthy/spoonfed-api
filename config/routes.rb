@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :party_items
+      delete 'party_items/:item_id/:party_template_id', to: 'party_items#destroy'
     end
   end
   namespace :api do
