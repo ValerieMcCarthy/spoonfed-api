@@ -16,8 +16,6 @@ class Api::V1::PartiesController < ApplicationController
       # @party.item_categories = @items
       if @party.save
           render json: @party
-      else
-        binding.pry
       end
       
       
@@ -27,6 +25,12 @@ class Api::V1::PartiesController < ApplicationController
   def show
       @party = Party.find(params[:id])
       render json: @party
+  end
+
+  def update
+    @party = Party.find(params[:id])
+    @party.update(party_params)
+    render json: @party
   end
 
   private
