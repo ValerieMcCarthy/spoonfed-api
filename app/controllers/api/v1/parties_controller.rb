@@ -5,7 +5,7 @@ class Api::V1::PartiesController < ApplicationController
       id = Auth.decode(response.request.env["HTTP_AUTHORIZATION"])[0]['user_id']
 
       @party = Party.new(party_params)
-      
+
       @party.user = User.find(id)
       # @items = []
       # party_params['item_categories_attributes'].each do |item |
@@ -17,8 +17,8 @@ class Api::V1::PartiesController < ApplicationController
       if @party.save
           render json: @party
       end
-      
-      
+
+
   end
 
 
@@ -31,6 +31,11 @@ class Api::V1::PartiesController < ApplicationController
     @party = Party.find(params[:id])
     @party.update(party_params)
     render json: @party
+  end
+
+  def destroy
+    @party = Party.find(params[:id])
+		@party.destroy
   end
 
   private
