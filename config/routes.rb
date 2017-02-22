@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   namespace :api do
     namespace :v1 do
       resources :party_items
@@ -7,7 +8,7 @@ Rails.application.routes.draw do
   end
   namespace :api do
     namespace :v1 do
-      resources :items
+      resources :items, :parties
     end
   end
   namespace :api do
