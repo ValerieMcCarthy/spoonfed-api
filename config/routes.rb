@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
   namespace :api do
     namespace :v1 do
-      resources :items, :parties
+      resources :items, :parties, :item_categories
     end
   end
   namespace :api do
